@@ -1,0 +1,23 @@
+
+<form >
+    <div class="container">
+        <div class="header"><h2>Contact us</h2></div>
+        <div class="inputs">
+            <input type="username" placeholder="Username" #inputUsername>
+            <input type="email" placeholder="Email" #inputEmail>
+            <input type="message" placeholder="Message" #inputMessage> 
+            <button (click)="send(inputUsername.value,inputEmail.value,inputMessage.value)">Send</button>
+        </div>
+
+        <div class="secHeader">
+            <h1>Our contact details</h1>
+        </div>
+
+        <div class="contacts">
+            <h2>Contact</h2>
+            <p>Phone: 0123456789</p>
+            <p>Email: ivailoradulov05@gmail.com</p>
+        </div>
+        
+    </div>
+</form>

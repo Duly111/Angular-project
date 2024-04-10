@@ -1,0 +1,56 @@
+form{
+    background-color: #E0C401;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0 1em 0;
+    justify-content: center;
+
+}
+h2{
+    text-align: center;
+    padding-bottom: 1.5em;
+}
+h1{
+    text-align: center;
+    background-color: #449c82;
+    padding: 1.5em 0 1.5em 0;
+    border-radius: 0.3em;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: space-around;
+    padding-bottom: 2em;
+
+}
+
+.inputs input,button{
+    padding: 0.9em;
+    border-radius: 0.3em;
+    background-color: white;
+    border: none;
+
+}
+
+button:hover{
+    background-color: #A3AA5D;
+    font-size: 14px;
+}
+
+input{
+    margin-bottom: 1em;
+}
+
+.contacts p{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 0.7em;
+    color: #3a6d5e;
+}

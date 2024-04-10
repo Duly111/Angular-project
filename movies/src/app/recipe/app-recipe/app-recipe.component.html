@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="new-theme-border">
+    <div class="header-background">
+      <span>New Recipe</span>
+    </div>
+
+    <form #form="ngForm" (ngSubmit)="addRecipe(form)">
+      <div class="new-theme-title">
+        <label for="themeName">Title <span class="red">*</span></label>
+        <input
+          type="text"
+          name="title"
+          id="themeName"
+          #inputTitle="ngModel"
+          ngModel
+          required
+          minlength="5"
+        />
+
+        <ng-container *ngIf="inputTitle.touched">
+          <p class="error" *ngIf="inputTitle?.errors?.['required']">
+            Recipe name is required.
+          </p>
+          <p class="error" *ngIf="inputTitle?.errors?.['minlength']">
+            Recipe name must be at least 5 characters long.
+          </p>
+        </ng-container>
+
+      </div>
+      <div class="new-theme-content">
+        <label for="postText">Ingredients <span class="red">*</span></label>
+        <textarea
+          type="text"
+          name="IngredientsText"
+          id="postText"
+          rows="8"
+          class="height"
+          #inputIngredients="ngModel"
+          ngModel
+          required
+          minlength="10"
+        ></textarea>
+
+        <ng-container *ngIf="inputIngredients.touched">
+          <p class="error" *ngIf="inputIngredients?.errors?.['required']">
+            The field with your post is required.
+          </p>
+          <p class="error" *ngIf="inputIngredients?.errors?.['minlength']">
+            Ingredients must be at least 10 characters long.
+          </p>
+        </ng-container>
+
+      </div>
+      <div class="new-theme-content">
+        <label for="postText">Steps <span class="red">*</span></label>
+        <textarea
+          type="text"
+          name="stepsText"
+          id="postText"
+          rows="8"
+          class="height"
+          #inputSteps="ngModel"
+          ngModel
+          minlength="10"
+        ></textarea>
+
+        <ng-container *ngIf="inputSteps.touched">
+          <p class="error" *ngIf="inputSteps?.errors?.['required']">
+            The field with your post is required.
+          </p>
+          <p class="error" *ngIf="inputSteps?.errors?.['minlength']">
+            Steps must be at least 10 characters long.
+          </p>
+        </ng-container>
+
+      </div>
+      <div class="new-theme-buttons">
+        <button class="cancel">Cancel</button>
+        <button class="public" (click)="addRecipe(form)">Post</button>
+      </div>
+    </form>
+  </div>
+</div>

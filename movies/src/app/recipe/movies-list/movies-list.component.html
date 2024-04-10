@@ -1,0 +1,25 @@
+<main>
+    <div class="theme-title">
+        
+        <!-- theme component  -->
+        <div *ngFor="let recipe of recipes " class="theme-container">
+            <div class="theme-name-wrapper">
+                <div class="theme-name">
+                    <a [routerLink]="recipe._id" class="normal">
+                        <h2>{{recipe.name}}</h2>
+                        <!-- {{ recipe._id }}  -->
+                    </a>
+                    <div class="columns">
+                        <div>
+                            <p>Date: <time>{{recipe._createdOn}}</time></p>
+                        </div>
+                        <div class="subscribers">
+                            <!-- <button class="subscribe">Subscribe</button> -->
+                            <p>Steps needed to prepare your dish: <span>{{recipe.steps.length || 0}}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

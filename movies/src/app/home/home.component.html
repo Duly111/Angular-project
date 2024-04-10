@@ -1,0 +1,44 @@
+<body>
+    <div class="container">
+        <div class="welcome">
+            <h2>Welcome to our site for easy and delicious meals</h2>
+            <p>On our site you have the opportunity to learn new, easy and very tasty recipes. Their preparation does not take more than 30 minutes and do not require special cooking skills. They also do not require many ingredients for their preparation.</p>
+            <div *ngIf="!isLoggedIn" class="logged">
+                <ul>
+                    <li>
+                        <a routerLink="/login">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Login
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/register">
+                            <i class="fas fa-user-plus"></i>
+                            Register
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div *ngIf="isLoggedIn" class="logged">
+                <ul>
+                    <li>
+                        <a >
+                            <i class="fas fa-sign-in-alt"></i>
+                            Recipes
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/contacts">
+                            <i class="fas fa-user-plus"></i>
+                            Contacts
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- <img src="../../../../images/images.jpg" alt=""> -->
+        
+        </div>        
+</div>
+</body>
