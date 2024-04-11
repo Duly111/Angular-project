@@ -6,12 +6,16 @@
             <div class="theme-name-wrapper">
                 <div class="theme-name">
                     <a [routerLink]="recipe._id" class="normal">
-                        <h2>{{recipe.name}}</h2>
+                        <h2>{{recipe.name | slice : 25}}</h2>
                         <!-- {{ recipe._id }}  -->
                     </a>
                     <div class="columns">
                         <div>
-                            <p>Date: <time>{{recipe._createdOn}}</time></p>
+                            <p>Date: <time>{{recipe._createdOn | elapsedTime }}</time></p>
+                        </div>
+
+                        <div>
+                            <img src="../../../assets/download.jpg">
                         </div>
                         <div class="subscribers">
                             <!-- <button class="subscribe">Subscribe</button> -->

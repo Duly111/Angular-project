@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../api.service';
 import { Recipes } from '../../types/movies';
-import { User } from '../../types/users';
+
 
 @Component({
   selector: 'app-movies-list',

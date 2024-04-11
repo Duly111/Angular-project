@@ -127,9 +127,8 @@
     padding: 0;
     align-self: center;
     margin: 1em 0;
-    width: 5em;
-    height: 5em;
-    border: 1px solid;
+    width: 100%;
+    height: auto;
 }
 
 .footer {
@@ -204,4 +203,33 @@
 
 .comment-area {
     min-width: 100%
+}
+.likes:hover{
+    cursor: pointer;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-main{
+    display: flex;
+    justify-content: space-around;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.post-content{
+    border: 1px solid #A3AA5D;
+    padding: 1em;
+    margin: 0.5em;
+}
+
+.post-content h4{
+display: flex;
+justify-content: center;
 }

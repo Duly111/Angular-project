@@ -56,6 +56,10 @@ export class UserService implements OnDestroy {
     return this.http.post('http://localhost:3030/users/logout',{}).pipe(tap(() => this.user$$.next(undefined)))
   }
 
+  updateProfile(username:string , email:string ,tel?:string ){
+    return this.http.put<UserForAuth>('http://localhost:3030/users/me',{username,email,tel}).pipe(tap((user) => this.user$$.next(user)))
+  }
+
   ngOnDestroy(): void {
     this.userSubscription.unsubscribe();
   }

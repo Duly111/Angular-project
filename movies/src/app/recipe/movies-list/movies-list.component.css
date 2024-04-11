@@ -1,5 +1,7 @@
 main {
     width: 60%;
+    margin: 0 auto;
+    overflow: auto;
 }
 
 
@@ -68,4 +70,19 @@ main {
 
 time {
     font-weight: bold;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.columns{
+    display: flex;
+    justify-content: space-around;
+}
+
+.theme-container{
+    display: flex;
+    justify-content: center;
 }

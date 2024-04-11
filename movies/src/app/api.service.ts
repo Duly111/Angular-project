@@ -22,14 +22,14 @@ export class ApiService {
   //   return this.http.get(`${apiUrl}/data/recipes/${id}`)
   // }
 
-  getRecipe(){
+  getRecipe(id:string){
     const {apiUrl} = environment;
+    return this.http.get<Recipes>(`${apiUrl}/data/recipes/${id}`)
   }
 
   createRecipes(title:string,ingredients:string,steps:string){
     const {apiUrl} = environment;
-    return this.http.post(`${apiUrl}/jsonstore/collections/recipes`,{title,ingredients,steps}).subscribe((data) =>{
-    })
+    return this.http.post(`${apiUrl}/jsonstore/collections/recipes`,{title,ingredients,steps})
   }
 
 
